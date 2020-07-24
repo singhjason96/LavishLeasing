@@ -12,11 +12,16 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    display: 'flex',
+    justifyContent: 'space-between'
   },
   title: {
     flexGrow: 1,
   },
+  itemOne: {
+    width: '100px',
+    marginLeft: '32px'
+  }
 }));
 
 export default function NavBar() {
@@ -24,8 +29,9 @@ export default function NavBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+        <Toolbar className={classes.menuButton}>
+        <img src={require('./logo.png')} className={classes.itemOne} />
+          <IconButton edge="start"  color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
         </Toolbar>

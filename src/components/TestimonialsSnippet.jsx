@@ -7,11 +7,36 @@ import {
   Input,
   FormControlLabel,
   Button,
+  Card,
+  CardContent,
+  Typography,
+  Container
 } from "@material-ui/core";
 import firebase from "./Firebase";
 
+const useStyles = makeStyles((theme) => ({
+  cards: {
+    flexDirection: 'row',
+    display: "flex",
+    justifyContent: 'space-between'
+  },
+  indCard: {
+    margin: theme.spacing(2),
+    opacity: "0.7"
+  },
+  contain: {
+    marginTop: '32px'
+  },
+  header: {
+    fontFamily: "Roboto Slab, serif",
+    color: 'white'
+  }
+}));
+
 const TestimonialsSnippet = () => {
   var [data, setData] = useState([]);
+  const classes = useStyles();
+
 
   useEffect(() => {
     const ref = firebase.database().ref(`testimonials/`);
@@ -20,14 +45,24 @@ const TestimonialsSnippet = () => {
       const testimonialsClean = Object.values(dbTestimonials);
       setData(testimonialsClean);
     });
-  });
+  }, []);
 
   return (
-    <div>
-      {data.map((el) => {
-        return <div>{el.personName}</div>;
+    <Container className={classes.contain}>
+      <Typography variant="h3" align="center" className={classes.header}>Testimonials</Typography>
+      <div className={classes.cards}>
+      {data.slice(Math.max(data.length - 3, 0)).map((el) => {
+        return (
+          <Card variant="outlined" className={classes.indCard}>
+            <CardContent>
+              <Typography variant="h5">{el.personMessage}</Typography>
+              <Typography variant="body2">{el.personName}</Typography>
+            </CardContent>
+          </Card>
+        )
       })}
-    </div>
+      </div>
+    </Container>
   );
 };
 

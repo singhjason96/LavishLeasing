@@ -13,11 +13,7 @@ const About = () => {
   const classes = useStyles();
   return (
     <Grid container>
-      <Typography>
-        Toby is in HR, which technically means he works for corporate, so he's
-        really not a part of our family. Also, he's divorced, so he's really not
-        a part of his family.
-      </Typography>
+ 
     </Grid>
   );
 };
