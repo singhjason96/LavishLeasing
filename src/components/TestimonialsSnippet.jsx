@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
     opacity: "0.7"
   },
   contain: {
-    marginTop: '32px'
+    marginTop: '32px',
+    paddingBottom: '32px'
   },
   header: {
     fontFamily: "Roboto Slab, serif",

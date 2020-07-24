@@ -11,13 +11,9 @@ const HomePage = () => {
   return (
     <GradientBackground>
       <NavBar />
-      <Container>
-        <SectionOne />
-      </Container>
-      <Container>
-        <TestimonialsSnippet />
-      </Container>
+      <SectionOne />
       <About />
+      <TestimonialsSnippet />
     </GradientBackground>
   );
 };

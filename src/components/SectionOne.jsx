@@ -6,14 +6,16 @@ const useStyles = makeStyles((theme) => ({
   header: {
     width: "400px",
     fontFamily: "Roboto Slab, serif",
-    fontSize: "3em",
+    fontSize: "3.2em",
     marginLeft: "auto",
     marginRight: "auto",
     color: "white",
     marginTop: "32px",
     fontWeight: "bold",
   },
-
+  section: {
+    height: "50vh",
+  },
   textBox: {
     marginTop: "32px",
     width: "400px",
@@ -24,11 +26,11 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     fontFamily: "Roboto Slab, serif",
-    opacity: '0.7'
+    opacity: "0.7",
   },
   imgPic: {
     width: "400px",
-    marginTop: "48px",
+    marginTop: "96px",
   },
   itemTwo: {
     justify: "center",
