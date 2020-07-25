@@ -6,12 +6,15 @@ import About from "./About";
 import { AddTestimonials } from "../components/AddTestimonials";
 import TestimonialsSnippet from "./TestimonialsSnippet";
 import { Container } from "@material-ui/core";
+import { Parallax } from 'react-scroll-parallax';
 
 const HomePage = () => {
   return (
     <GradientBackground>
       <NavBar />
-      <SectionOne />
+      <Parallax className="custom-class" y={[-50, 50]} tagOuter="figure">
+        <SectionOne />
+      </Parallax>
       <About />
       <TestimonialsSnippet />
     </GradientBackground>
