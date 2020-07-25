@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
   header: {
     width: "400px",
     fontFamily: "Roboto Slab, serif",
-    fontSize: "3.2em",
+    fontSize: "4em",
     marginLeft: "auto",
     marginRight: "auto",
     color: "white",

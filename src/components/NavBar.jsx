@@ -30,7 +30,6 @@ export default function NavBar() {
     <div className={classes.root}>
       <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
         <Toolbar className={classes.menuButton}>
-        <img src={require('./logo.png')} className={classes.itemOne} />
           <IconButton edge="start"  color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>

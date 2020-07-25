@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contain: {
     flexDirection: "row",
-    marginTop: "32px",
+    marginTop: "40px",
     justifyContent: "flex-end",
     color: "white",
   },
@@ -34,25 +34,27 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Roboto Slab, serif",
     color: "white",
     textAlign: "center",
-    marginTop: "32px",
+    marginTop: "48px",
   },
   description: {
     fontFamily: "Roboto Slab, serif",
     color: "white",
-    textAlign: 'center'
   },
   boxOne: {
-    backgroundColor: 'black',
-    padding: '16px',
-    opacity: '0.7'
+    backgroundColor: "black",
+    padding: "16px",
+    opacity: "0.7",
   },
   boxTwo: {
-    backgroundColor: '#0066cc',
-    padding: '16px',
-    opacity: '0.7'
+    backgroundColor: "#0066cc",
+    padding: "16px",
+    opacity: "0.7",
   },
   gridStyle: {
-    padding: '32px'
+    padding: "32px",
+  },
+  innerGrid: {
+    margin: theme.spacing(2),
   }
 }));
 
@@ -60,36 +62,49 @@ const About = () => {
   const classes = useStyles();
   return (
     <>
-
       <Grid container className={classes.contain}>
         <Grid item xs={6} className={classes.gridStyle}>
           <Box className={classes.boxOne}>
-            <Typography variant="h4" className={classes.subHeader}>
-              What We Do
-            </Typography>
-            <Typography variant="h6" className={classes.description}>
-              In Japan, heart surgeon. Number one. Steady hand. One day, yakuza
-              boss need new heart. I do operation. But, mistake! Yakuza boss
-              die. Yakuza very mad. I hide in fishing boat, come to America. No
-              English, no food, no money. Darryl give me job. Now I have house,
-              American car, and new woman. Darryl save life. My big secret: I
-              kill yakuza boss on purpose. I good surgeon. The best!
-            </Typography>
+            <Grid container >
+              <Grid item xs={4}>
+                <Typography variant="h5" className={classes.subHeader}>
+                  What We Do
+                </Typography>
+              </Grid>
+              <Grid item xs={8}>
+                <Typography variant="body1" className={classes.description}>
+                  In Japan, heart surgeon. Number one. Steady hand. One day,
+                  yakuza boss need new heart. I do operation. But, mistake!
+                  Yakuza boss die. Yakuza very mad. I hide in fishing boat, come
+                  to America. No English, no food, no money. Darryl give me job.
+                  Now I have house, American car, and new woman. Darryl save
+                  life. My big secret: I kill yakuza boss on purpose. I good
+                  surgeon. The best!
+                </Typography>
+              </Grid>
+            </Grid>
           </Box>
         </Grid>
         <Grid item xs={6} className={classes.gridStyle}>
-          <Box className={classes.boxTwo}>
-            <Typography variant="h4" className={classes.subHeader}>
-              What We Do
-            </Typography>
-            <Typography variant="h6" className={classes.description}>
-              In Japan, heart surgeon. Number one. Steady hand. One day, yakuza
-              boss need new heart. I do operation. But, mistake! Yakuza boss
-              die. Yakuza very mad. I hide in fishing boat, come to America. No
-              English, no food, no money. Darryl give me job. Now I have house,
-              American car, and new woman. Darryl save life. My big secret: I
-              kill yakuza boss on purpose. I good surgeon. The best!
-            </Typography>
+        <Box className={classes.boxTwo}>
+            <Grid container >
+              <Grid item xs={4}>
+                <Typography variant="h5" className={classes.subHeader}>
+                  How We Do It
+                </Typography>
+              </Grid>
+              <Grid item xs={8}>
+                <Typography variant="body1" className={classes.description}>
+                  In Japan, heart surgeon. Number one. Steady hand. One day,
+                  yakuza boss need new heart. I do operation. But, mistake!
+                  Yakuza boss die. Yakuza very mad. I hide in fishing boat, come
+                  to America. No English, no food, no money. Darryl give me job.
+                  Now I have house, American car, and new woman. Darryl save
+                  life. My big secret: I kill yakuza boss on purpose. I good
+                  surgeon. The best!
+                </Typography>
+              </Grid>
+            </Grid>
           </Box>
         </Grid>
       </Grid>
