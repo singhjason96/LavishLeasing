@@ -7,8 +7,10 @@ import {
   Input,
   FormControlLabel,
   Button,
+  Container,
 } from "@material-ui/core";
 import firebase from "./Firebase";
+import GradientBackground from "./GradientBackground";
 
 export const AddTestimonials = () => {
   var [data, setData] = useState([]);
@@ -37,23 +39,27 @@ export const AddTestimonials = () => {
   console.log("this is the food data", data);
 
   return (
-    <form>
-      <FormControl margin="normal" required fullWidth>
-        <InputLabel htmlFor="name">Name of Person</InputLabel>
-        <Input id="name" name="name" value={name} onChange={OnChangeName} />
-      </FormControl>
-      <FormControl margin="normal" required fullWidth>
-        <TextField
-          id="full-width-text-field"
-          label="Type your story here..."
-          multiline
-          variant="outlined"
-          rows="8"
-          defaultValue={message}
-          onChange={OnChangeMessage}
-        />
-      </FormControl>
-      <Button onClick={onSubmit}>Submit</Button>
-    </form>
+    <GradientBackground>
+      <Container>
+        <form>
+          <FormControl margin="normal" required fullWidth>
+            <InputLabel htmlFor="name">Name of Person</InputLabel>
+            <Input id="name" name="name" value={name} onChange={OnChangeName} />
+          </FormControl>
+          <FormControl margin="normal" required fullWidth>
+            <TextField
+              id="full-width-text-field"
+              label="Type your story here..."
+              multiline
+              variant="outlined"
+              rows="8"
+              defaultValue={message}
+              onChange={OnChangeMessage}
+            />
+          </FormControl>
+          <Button onClick={onSubmit}>Submit</Button>
+        </form>
+      </Container>
+    </GradientBackground>
   );
 };
