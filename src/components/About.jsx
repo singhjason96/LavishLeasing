@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     padding: '32px',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    marginTop: '15%'
   },
   header: {
     fontFamily: "Roboto Slab, serif",
