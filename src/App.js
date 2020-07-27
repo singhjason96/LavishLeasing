@@ -1,10 +1,23 @@
 import React from "react";
-import NavBar from "./components/NavBar";
 import HomePage from "./components/HomePage";
+import { BrowserRouter, Route } from "react-router-dom";
+import { AddTestimonials } from "./components/AddTestimonials";
+import { Switch } from "@material-ui/core";
 
 function App() {
   return (
-      <HomePage />
+    <>
+      <BrowserRouter>
+        <div>
+          <Route path="/add">
+            <AddTestimonials />
+          </Route>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+        </div>
+      </BrowserRouter>
+    </>
   );
 }
 
