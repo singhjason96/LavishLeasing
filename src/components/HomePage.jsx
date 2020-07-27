@@ -7,16 +7,32 @@ import { AddTestimonials } from "../components/AddTestimonials";
 import TestimonialsSnippet from "./TestimonialsSnippet";
 import { Container, Tooltip } from "@material-ui/core";
 import ArrowScroll from "./ArrowScroll";
-import { Parallax } from "react-scroll-parallax";
+import Plx from "react-plx";
+
+const parallaxData = [
+  {
+    start: 700,
+    end: 1000,
+    properties: [
+      {
+        startValue: 0,
+        endValue: 1000,
+        property: "translateY",
+      },
+    ],
+  },
+];
 
 const HomePage = () => {
   return (
     <GradientBackground>
       <NavBar />
-        <SectionOne />
+      <SectionOne />
+      <Plx className="MyAwesomeParallax" parallaxData={parallaxData}>
         <ArrowScroll />
-        <About />
-        <TestimonialsSnippet />
+      </Plx>
+      <About />
+      <TestimonialsSnippet />
     </GradientBackground>
   );
 };
