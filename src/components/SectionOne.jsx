@@ -1,12 +1,16 @@
 import React from "react";
-import { Grid, Typography, Container } from "@material-ui/core";
+import { Grid, Typography, Container, Tooltip, Fab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import { Parallax } from "react-scroll-parallax";
+import ArrowScroll from './ArrowScroll';
+
 
 const useStyles = makeStyles((theme) => ({
   header: {
     width: "400px",
     fontFamily: "Roboto Slab, serif",
-    fontSize: "3.2em",
+    fontSize: "4em",
     marginLeft: "auto",
     marginRight: "auto",
     color: "white",
@@ -14,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
   },
   section: {
-    height: "50vh",
+    height: "75vh",
+    marginTop: "128px",
   },
   textBox: {
     marginTop: "32px",
@@ -61,6 +66,7 @@ const SectionOne = () => {
           />
         </Container>
       </Grid>
+
     </Grid>
   );
 };

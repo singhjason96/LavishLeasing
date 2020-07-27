@@ -10,15 +10,15 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  itemOne: {
-    backgorundColor: "red",
-    height: "50vh",
-  },
   contain: {
     flexDirection: "row",
-    marginTop: "32px",
-    justifyContent: "flex-end",
     color: "white",
+    height: '75vh',
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '32px',
+    justifyContent: 'space-between',
+    marginTop: '15%'
   },
   header: {
     fontFamily: "Roboto Slab, serif",
@@ -44,15 +44,26 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "black",
     padding: "16px",
     opacity: "0.7",
+    justifyContent: 'space-between',
+    padding: '16px'
+
   },
   boxTwo: {
     backgroundColor: "#0066cc",
     padding: "16px",
     opacity: "0.7",
+    justifyContent: 'space-between',
+    padding: '16px'
   },
   gridStyle: {
-    padding: "32px",
+    margin: 'auto',
+    justifyContent: 'space-between',
+    padding: '48px'
   },
+  indGrid: {
+    margin: theme.spacing(2),
+
+  }
 }));
 
 const About = () => {
@@ -62,8 +73,8 @@ const About = () => {
       <Grid container className={classes.contain}>
         <Grid item xs={6} className={classes.gridStyle}>
           <Box className={classes.boxOne}>
-            <Grid container>
-              <Grid item xs={6}>
+            <Grid container className={classes.indGrid}>
+              <Grid item xs={6} >
                 <Typography variant="h4" className={classes.subHeader}>
                   What We Do
                 </Typography>
@@ -84,7 +95,7 @@ const About = () => {
         </Grid>
         <Grid item xs={6} className={classes.gridStyle}>
           <Box className={classes.boxTwo}>
-          <Grid container>
+          <Grid container className={classes.indGrid}>
               <Grid item xs={6}>
                 <Typography variant="h4" className={classes.subHeader}>
                   How We Do It
