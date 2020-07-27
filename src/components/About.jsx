@@ -10,15 +10,13 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  itemOne: {
-    backgorundColor: "red",
-    height: "50vh",
-  },
   contain: {
     flexDirection: "row",
-    marginTop: "32px",
-    justifyContent: "flex-end",
+    margin: 'auto',
     color: "white",
+    height: '75vh',
+    display: 'flex',
+    justifyContent: 'space-between',
   },
   header: {
     fontFamily: "Roboto Slab, serif",
@@ -44,14 +42,18 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "black",
     padding: "16px",
     opacity: "0.7",
+    justifyContent: 'space-between'
+
   },
   boxTwo: {
     backgroundColor: "#0066cc",
     padding: "16px",
     opacity: "0.7",
+    justifyContent: 'space-between',
   },
   gridStyle: {
-    padding: "32px",
+    margin: 'auto',
+    justifyContent: 'space-between'
   },
 }));
 
