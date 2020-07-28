@@ -15,6 +15,8 @@ import {
 } from "@material-ui/core";
 import firebase from "./Firebase";
 import GradientBackground from "./GradientBackground";
+import { useForm } from "react-hook-form";
+import * as emailjs from 'emailjs-com'
 
 const useStyles = makeStyles((theme) => ({
   formSize: {},
@@ -43,11 +45,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const ContactPage = () => {
+const ContactPage = () => {
   var [data, setData] = useState([]);
   var [name, setName] = useState("");
   var [message, setMessage] = useState("");
   const classes = useStyles();
+  var [email, setEmail] = useState("");
 
   const OnChangeName = (e) => {
     setName(e.target.value);
@@ -56,24 +59,41 @@ export const ContactPage = () => {
     setMessage(e.target.value);
   };
 
-  let customerData = [];
-
-  const onSubmit = () => {
-    customerData.push({ personName: name, personMessage: message });
-    setData(customerData);
-    firebase.database().ref(`testimonials/${new Date().getTime()}`).set({
-      personName: name,
-      personMessage: message,
-    });
+  const OnChangeEmail = (e) => {
+    setEmail(e.target.value);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    console.log('this is clicked')
+    let templateParams = {
+      from_name: email,
+      to_name: 'jason.singh@baruchmail.cuny.edu',
+      message: message
+    }
+
+    emailjs.send(
+      'outlook',
+      'template_syJiFl0K',
+      templateParams,
+      'user_4vHlLaKvbyuIPCxvoieQ5'
+    )
+    resetForm()
+  }
+const resetForm = () => {
+  setName('')
+  setEmail('')
+  setMessage('')
+}
 
   return (
     <GradientBackground>
       <Grid container align="center" className={classes.containerStyle}>
         <Paper className={classes.boxStyle}>
-          <form className={classes.formSize}>
+          <form className={classes.formSize} >
             <Typography variant="h5" className={classes.textStyle}>
-              Add Your Testimonial
+              Contact Us
             </Typography>
             <FormControl
               margin="normal"
@@ -89,10 +109,27 @@ export const ContactPage = () => {
                 onChange={OnChangeName}
               />
             </FormControl>
+            <FormControl
+              margin="normal"
+              required
+              fullWidth
+              className={classes.formControlStyle}
+            >
+              <InputLabel htmlFor="email">You Email Address</InputLabel>
+              <Input
+                id="email"
+                name="email"
+                value={email}
+                onChange={OnChangeEmail}
+              />
+            </FormControl>
+            <FormControl>
+              <input  name="image" type="file" />
+            </FormControl>
             <FormControl margin="normal" required fullWidth>
               <TextField
                 id="full-width-text-field"
-                label="Type your testimonial here..."
+                label="Type your message here..."
                 multiline
                 variant="outlined"
                 rows="8"
@@ -101,9 +138,9 @@ export const ContactPage = () => {
               />
             </FormControl>
             <Button
-              onClick={onSubmit}
               variant="contained"
               className={classes.buttonStyle}
+              onClick={handleSubmit}
             >
               Submit
             </Button>
@@ -113,3 +150,5 @@ export const ContactPage = () => {
     </GradientBackground>
   );
 };
+
+export default ContactPage;
