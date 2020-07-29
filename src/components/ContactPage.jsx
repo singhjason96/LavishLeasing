@@ -16,7 +16,7 @@ import {
 import firebase from "./Firebase";
 import GradientBackground from "./GradientBackground";
 import { useForm } from "react-hook-form";
-import * as emailjs from 'emailjs-com'
+import * as emailjs from "emailjs-com";
 
 const useStyles = makeStyles((theme) => ({
   formSize: {},
@@ -51,6 +51,7 @@ const ContactPage = () => {
   var [message, setMessage] = useState("");
   const classes = useStyles();
   var [email, setEmail] = useState("");
+  var [files, setFiles] = useState('')
 
   const OnChangeName = (e) => {
     setName(e.target.value);
@@ -63,6 +64,11 @@ const ContactPage = () => {
     setEmail(e.target.value);
   };
 
+  const OnChangeFile = (e) => {
+    setFiles(e.target.value)
+    console.log(files)
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -70,7 +76,8 @@ const ContactPage = () => {
     let templateParams = {
       from_name: email,
       to_name: 'jason.singh@baruchmail.cuny.edu',
-      message: message
+      message_html: message,
+      file: files
     }
 
     emailjs.send(
@@ -87,11 +94,12 @@ const resetForm = () => {
   setMessage('')
 }
 
+
   return (
     <GradientBackground>
       <Grid container align="center" className={classes.containerStyle}>
         <Paper className={classes.boxStyle}>
-          <form className={classes.formSize} >
+          <form className={classes.formSize} id="former">
             <Typography variant="h5" className={classes.textStyle}>
               Contact Us
             </Typography>
@@ -124,7 +132,7 @@ const resetForm = () => {
               />
             </FormControl>
             <FormControl>
-              <input  name="image" type="file" />
+              <input name="image" type="file" onChange={OnChangeFile} />
             </FormControl>
             <FormControl margin="normal" required fullWidth>
               <TextField
