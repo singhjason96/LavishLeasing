@@ -2,6 +2,8 @@ import app, { firestore } from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
 import "firebase/database";
+import 'firebase/storage';
+
 
 var firebaseConfig = {
     apiKey: "AIzaSyAUeCHvpTXEJmpiB981Q7UktU16l7RFPQ8",
@@ -14,12 +16,14 @@ var firebaseConfig = {
     measurementId: "G-YTFM3LD8SF"
   };
 
+
   class Firebase {
     constructor() {
       app.initializeApp(firebaseConfig);
       this.auth = app.auth();
       this.db = app.firestore();
       this.database = app.database;
+      this.storage = app.storage;
       // const { user, setUser } = useContext(UserContext);
     }
   }

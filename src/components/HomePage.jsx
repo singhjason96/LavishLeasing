@@ -22,6 +22,7 @@ const parallaxData = [
   },
 ];
 
+
 const HomePage = () => {
   return (
     <GradientBackground>
