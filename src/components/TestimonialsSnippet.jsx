@@ -33,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
   header: {
     fontFamily: "Roboto Slab, serif",
     color: 'white'
+  },
+  textStyle: {
+    fontFamily: "Roboto Slab, serif",
+
   }
 }));
 
@@ -58,7 +62,7 @@ const TestimonialsSnippet = () => {
         return (
           <Card variant="outlined" className={classes.indCard}>
             <CardContent>
-              <Typography variant="h5">{el.personMessage}</Typography>
+              <Typography variant="h5" className={classes.textStyle}>{el.personMessage}</Typography>
               <Typography variant="body2">{el.personName}</Typography>
             </CardContent>
           </Card>
