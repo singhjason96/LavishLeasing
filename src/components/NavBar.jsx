@@ -35,7 +35,6 @@ export default function NavBar() {
     <div className={classes.root}>
       <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
         <Toolbar className={classes.menuButton}>
-        <img src={require('./logo.png')} className={classes.itemOne} />
         <Link to='/alltestimonials' className={classes.linkStyle}><Typography>Testimonials</Typography></Link>
         <Typography>Gallery</Typography>
         <Link to='/contact' className={classes.linkStyle}><Typography>Contact</Typography></Link>

@@ -10,8 +10,8 @@ import Plx from "react-plx";
 
 const parallaxData = [
   {
-    start: 700,
-    end: 1000,
+    start: 1000,
+    end: 1500,
     properties: [
       {
         startValue: 0,
@@ -27,9 +27,7 @@ const HomePage = () => {
     <GradientBackground>
       <NavBar />
       <SectionOne />
-      <Plx className="MyAwesomeParallax" parallaxData={parallaxData}>
-        <ArrowScroll />
-      </Plx>
+
       <About />
       <TestimonialsSnippet />
     </GradientBackground>
