@@ -15,8 +15,12 @@ function App() {
           <Route exact path="/">
             <HomePage />
           </Route>
+
           <Route path="/contact">
             <ContactPage />
+    </Route>
+          <Route path='/alltestimonials'>
+            <AllTestimonials />
           </Route>
         </div>
       </BrowserRouter>
