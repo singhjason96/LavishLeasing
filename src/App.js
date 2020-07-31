@@ -5,6 +5,7 @@ import { AddTestimonials } from "./components/AddTestimonials";
 import { Switch } from "@material-ui/core";
 import AllTestimonials from './components/AllTestimonials'
 import GalleryAdd from './components/GalleryAdd';
+import Gallery from './components/Gallery'
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route exact path="/galleryadd">
             <GalleryAdd />
+          </Route>
+          <Route path="/gallery">
+            <Gallery />
           </Route>
         </div>
       </BrowserRouter>

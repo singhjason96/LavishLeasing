@@ -19,19 +19,8 @@ import GradientBackground from "./GradientBackground";
 
 const useStyles = makeStyles((theme) => ({
   backgroundStyle: {
-    height: "100vh",
-  },
-  contain: {
-    margin: theme.spacing(2),
-  },
-  indCard: {
-    height: "400px",
-    textAlign: "center",
-    opacity: "0.7",
-  },
-  titleStyle: {
-    padding: "32px",
-    fontFamily: "Roboto Slab, serif",
+    height: '100vh',
+    padding: '32px'
   },
   textStyle: {
     fontFamily: "Roboto Slab, serif",
@@ -39,11 +28,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const GalleryAdd = () => {
-  var [data, setData] = useState([]);
-  var [name, setName] = useState("");
-  var [message, setMessage] = useState("");
   const classes = useStyles();
   const [image, setImage] = useState(null)
+
 
   const handleChange = (e) => {
     if(e.target.files[0]){
@@ -74,7 +61,10 @@ const GalleryAdd = () => {
   
 
   return (
-    <form>
+   <GradientBackground >
+     <Typography variant="h2" align="center" className={classes.textStyle}>Add To The Gallery</Typography>
+     <Container className={classes.backgroundStyle} align="center">
+     <form>
       <input type="file" name="image"  onChange={handleChange} />
       <Button
         variant="contained"
@@ -84,6 +74,8 @@ const GalleryAdd = () => {
         Submit
       </Button>
     </form>
+     </Container>
+   </GradientBackground>
   );
 };
 
