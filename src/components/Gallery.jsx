@@ -40,44 +40,51 @@ const useStyles = makeStyles((theme) => ({
 const Gallery = () => {
   var [data, setData] = useState([]);
   const classes = useStyles();
-  var [image, setImage] = useState([{}]);
+  var [image, setImage] = useState([]);
 
   var listImages = [];
 
   var storage = firebase.storage();
 
+  var storageRef = firebase.storage().ref();
+  var imagesRef = storageRef.child("images");
+
+  var links = [];
+
   useEffect(() => {
-    firebase
-      .storage()
-      .ref("images")
-      .listAll()
-      .then(function (res) {
-        res.prefixes.forEach(function (folderRef) {});
-        res.items.forEach(function (itemRef) {
-          storage
-            .ref("images")
-            .child(itemRef.name)
-            .getDownloadURL()
-            .then((url) => {
-              if (url !== null) {
-                listImages.push({ source: url });
-                setImage(listImages);
-              }
-            });
+    const getPics = async () => {
+      await imagesRef
+        .listAll()
+        .then(function (res) {
+          res.prefixes.forEach(function (folderRef) {});
+          res.items.forEach(function (itemRef) {
+            storage
+              .ref("images")
+              .child(itemRef.name)
+              .getDownloadURL()
+              .then((url) => {
+                links.push(url);
+              }, 5000);
+          });
+        })
+        .catch(function (error) {
+          console.log(error);
         });
-      });
 
-    setImage(listImages);
-  }, []);
+        console.log(links)
+        console.log(links.length)
+        console.log(links)
+        console.log(links.length)
+    };
 
+    getPics()
+  });
 
-  return(
-   <GradientBackground className={classes.backgroundStyle}>
-     <Typography>Gallery</Typography>
-     {image === undefined ? <div>100 Racks On Right Now Lil Bitch</div>: <div>No racks</div>}
-   </GradientBackground>
-  )
-
+  return (
+    <GradientBackground>
+      <Typography>Hi</Typography>
+    </GradientBackground>
+  );
 };
 
 export default Gallery;
