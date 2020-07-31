@@ -15,6 +15,7 @@ import {
 } from "@material-ui/core";
 import firebase from "./Firebase";
 import GradientBackground from "./GradientBackground";
+import NavBar from './NavBar';
 
 const useStyles = makeStyles((theme) => ({
   backgroundStyle: {
@@ -25,12 +26,14 @@ const useStyles = makeStyles((theme) => ({
   },
   indCard:{
       height: '400px',
-      textAlign: 'center',
       opacity: '0.7',
+      padding: '24px'
+
   },
   titleStyle: {
       padding: '32px',
       fontFamily: "Roboto Slab, serif",
+      color: 'white'
   },
   textStyle: {
     fontFamily: "Roboto Slab, serif",
@@ -52,6 +55,7 @@ const AllTestimonials = () => {
 
   return (
     <GradientBackground className={classes.backgroundStyle}>
+      <NavBar />
       <Container >
         <Typography variant="h3" align="center" className={classes.titleStyle}>
           Testimonials

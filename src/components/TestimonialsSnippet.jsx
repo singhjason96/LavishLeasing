@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
   },
   indCard: {
     margin: theme.spacing(2),
-    opacity: "0.7"
+    opacity: "0.7",
+    padding: '24px'
   },
   contain: {
     marginTop: '32px',
@@ -32,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     fontFamily: "Roboto Slab, serif",
-    color: 'white !important'
+    color: 'white !important',
+    padding: '32px'
   },
   textStyle: {
     fontFamily: "Roboto Slab, serif",
