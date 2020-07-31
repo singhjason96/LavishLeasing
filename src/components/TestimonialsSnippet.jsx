@@ -28,11 +28,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '32px',
     paddingBottom: '32px',
     height: '55vh',
-    marginTop: '15%'
+    marginTop: '10%'
   },
   header: {
     fontFamily: "Roboto Slab, serif",
-    color: 'white'
+    color: 'white !important'
   },
   textStyle: {
     fontFamily: "Roboto Slab, serif",
