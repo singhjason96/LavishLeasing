@@ -36,7 +36,7 @@ export default function NavBar() {
       <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
         <Toolbar className={classes.menuButton}>
         <img src={require('./logo.png')} className={classes.itemOne} />
-        <Link to='/add' className={classes.linkStyle}><Typography>Testimonials</Typography></Link>
+        <Link to='/alltestimonials' className={classes.linkStyle}><Typography>Testimonials</Typography></Link>
         <Typography>Gallery</Typography>
         <Link to='/contact' className={classes.linkStyle}><Typography>Contact</Typography></Link>
           <IconButton edge="start"  color="inherit" aria-label="menu">

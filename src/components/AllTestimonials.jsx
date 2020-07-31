@@ -18,7 +18,7 @@ import GradientBackground from "./GradientBackground";
 
 const useStyles = makeStyles((theme) => ({
   backgroundStyle: {
-    height: "100vh",
+    height: "100%",
   },
   contain: {
       margin: theme.spacing(2)
