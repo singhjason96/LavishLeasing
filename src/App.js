@@ -2,8 +2,7 @@ import React from "react";
 import HomePage from "./components/HomePage";
 import { BrowserRouter, Route } from "react-router-dom";
 import { AddTestimonials } from "./components/AddTestimonials";
-import { Switch } from "@material-ui/core";
-import AllTestimonials from './components/AllTestimonials'
+import ContactPage from './components/ContactPage';
 
 function App() {
   return (
@@ -16,6 +15,10 @@ function App() {
           <Route exact path="/">
             <HomePage />
           </Route>
+
+          <Route path="/contact">
+            <ContactPage />
+    </Route>
           <Route path='/alltestimonials'>
             <AllTestimonials />
           </Route>
