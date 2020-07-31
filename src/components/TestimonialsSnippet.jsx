@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
   },
   indCard: {
     margin: theme.spacing(2),
-    opacity: "0.7"
+    opacity: "0.7",
+    padding: '24px'
   },
   contain: {
     marginTop: '32px',

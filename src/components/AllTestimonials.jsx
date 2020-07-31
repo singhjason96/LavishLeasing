@@ -25,8 +25,9 @@ const useStyles = makeStyles((theme) => ({
   },
   indCard:{
       height: '400px',
-      textAlign: 'center',
       opacity: '0.7',
+      padding: '24px'
+
   },
   titleStyle: {
       padding: '32px',

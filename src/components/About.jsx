@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   item: {
-    margin: theme.spacing(2),
+    margin: theme.spacing(4),
     padding: "16px",
   },
   subHeader: {
@@ -44,17 +44,18 @@ const useStyles = makeStyles((theme) => ({
   },
   boxOne: {
     backgroundColor: "black",
-    padding: "16px",
+    padding: "12px",
     opacity: "0.7",
     justifyContent: "space-between",
-    padding: "16px",
+    padding: "24px",
   },
   boxTwo: {
     backgroundColor: "#0066cc",
-    padding: "16px",
+    padding: "12px",
     opacity: "0.7",
     justifyContent: "space-between",
-    padding: "16px",
+    padding: "24px",
+
   },
   gridStyle: {
     margin: "auto",
@@ -79,7 +80,7 @@ const About = () => {
             <Box className={classes.boxOne}>
               <Grid container className={classes.indGrid}>
                 <Grid item xs={6}>
-                  <Typography variant="h4" className={classes.subHeader}>
+                  <Typography variant="h5" className={classes.subHeader}>
                     What We Do
                   </Typography>
                 </Grid>
@@ -101,7 +102,7 @@ const About = () => {
             <Box className={classes.boxTwo}>
               <Grid container className={classes.indGrid}>
                 <Grid item xs={6}>
-                  <Typography variant="h4" className={classes.subHeader}>
+                  <Typography variant="h5" className={classes.subHeader}>
                     How We Do It
                   </Typography>
                 </Grid>
