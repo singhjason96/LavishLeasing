@@ -51,7 +51,7 @@ const ContactPage = () => {
   var [message, setMessage] = useState("");
   const classes = useStyles();
   var [email, setEmail] = useState("");
-  var [files, setFiles] = useState('')
+  var [file, setFiles] = useState(null)
 
   const OnChangeName = (e) => {
     setName(e.target.value);
@@ -65,19 +65,21 @@ const ContactPage = () => {
   };
 
   const OnChangeFile = (e) => {
-    setFiles(e.target.value)
-    console.log(files)
+    if(e.target.files[0]){
+      setFiles(e.target.files[0])
+    }
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
     console.log('this is clicked')
+    console.log('this was the file', file)
     let templateParams = {
       from_name: email,
       to_name: 'jason.singh@baruchmail.cuny.edu',
       message_html: message,
-      file: files
+      file: file
     }
 
     emailjs.send(
@@ -88,11 +90,16 @@ const ContactPage = () => {
     )
     resetForm()
   }
+
+
 const resetForm = () => {
   setName('')
   setEmail('')
   setMessage('')
 }
+
+
+console.log(file)
 
 
   return (
