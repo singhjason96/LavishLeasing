@@ -6,12 +6,13 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   itemOne: {
     width: '50%',
-    marginTop: '10%',
+    marginTop: '15%',
 
   },
   section: {
     justifyItems: 'center',
-    alignContent: 'center'
+    alignContent: 'center',
+    height: '75vh'
   }
  
 }));

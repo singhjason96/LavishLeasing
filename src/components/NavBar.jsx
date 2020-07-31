@@ -13,8 +13,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   menuButton: {
-    display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-evenly'
   },
   title: {
     flexGrow: 1,
@@ -38,9 +37,6 @@ export default function NavBar() {
         <Link to='/alltestimonials' className={classes.linkStyle}><Typography>Testimonials</Typography></Link>
         <Typography>Gallery</Typography>
         <Link to='/contact' className={classes.linkStyle}><Typography>Contact</Typography></Link>
-          <IconButton edge="start"  color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
         </Toolbar>
       </AppBar>
     </div>

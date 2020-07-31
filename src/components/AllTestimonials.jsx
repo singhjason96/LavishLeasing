@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   titleStyle: {
       padding: '32px',
       fontFamily: "Roboto Slab, serif",
+      color: 'white'
   },
   textStyle: {
     fontFamily: "Roboto Slab, serif",

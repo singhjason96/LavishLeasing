@@ -27,7 +27,6 @@ const HomePage = () => {
     <GradientBackground>
       <NavBar />
       <SectionOne />
-
       <About />
       <TestimonialsSnippet />
     </GradientBackground>

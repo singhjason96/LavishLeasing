@@ -15,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     display: "flex",
     justifyContent: "space-between",
-    padding: "32px",
     justifyContent: "space-between",
+    marginTop: '32px'
   },
   bigContainer: {
     marginTop: "15%",

@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
   cards: {
     flexDirection: 'row',
     display: "flex",
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    marginTop: '32px'
   },
   indCard: {
     margin: theme.spacing(2),
