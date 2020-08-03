@@ -19,8 +19,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   bigContainer: {
-    marginTop: "15%",
     height: "75vh",
+    background:
+      "url(https://pictures.topspeed.com/IMG/jpg/201707/2018-rolls-royce-phantom-20.jpg)",
+    backgroundSize: "cover",
+    maxWidth: "100% !important",
+    backgroundColor: "#0d0d0d",
+    opacity: "0.7"
   },
   header: {
     fontFamily: "Roboto Slab, serif",
@@ -41,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   description: {
     fontFamily: "Roboto Slab, serif",
     color: "white",
-    fontSize: '12px'
+    fontSize: "12px",
   },
   boxOne: {
     backgroundColor: "black",
@@ -60,7 +65,12 @@ const useStyles = makeStyles((theme) => ({
   gridStyle: {
     margin: "auto",
     justifyContent: "space-between",
-    padding: "48px",
+    padding: "128px",
+  },
+  gridStyleOne: {
+    margin: "auto",
+    justifyContent: "space-between",
+    padding: "128px",
   },
   indGrid: {
     margin: theme.spacing(2),
@@ -70,59 +80,57 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
   const classes = useStyles();
   return (
-    <>
-      <Container className={classes.bigContainer}>
-        <Typography className={classes.header} variant="h3">
-          Our Services
-        </Typography>
-        <Grid container className={classes.contain}>
-          <Grid item xs={6} className={classes.gridStyle}>
-            <Box className={classes.boxOne}>
-              <Grid container className={classes.indGrid}>
-                <Grid item xs={6}>
-                  <Typography variant="h5" className={classes.subHeader}>
-                    What We Do
-                  </Typography>
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body2" className={classes.description}>
-                    In Japan, heart surgeon. Number one. Steady hand. One day,
-                    yakuza boss need new heart. I do operation. But, mistake!
-                    Yakuza boss die. Yakuza very mad. I hide in fishing boat,
-                    come to America. No English, no food, no money. Darryl give
-                    me job. Now I have house, American car, and new woman.
-                    Darryl save life. My big secret: I kill yakuza boss on
-                    purpose. I good surgeon. The best!
-                  </Typography>
-                </Grid>
+    <Container className={classes.bigContainer}>
+      <Typography className={classes.header} variant="h3">
+        Our Services
+      </Typography>
+      <Grid container>
+        <Grid item xs={6} className={classes.gridStyleOne}>
+          <Box className={classes.boxOne}>
+            <Grid container className={classes.indGrid}>
+              <Grid item xs={6}>
+                <Typography variant="h5" className={classes.subHeader}>
+                  What We Do
+                </Typography>
               </Grid>
-            </Box>
-          </Grid>
-          <Grid item xs={6} className={classes.gridStyle}>
-            <Box className={classes.boxTwo}>
-              <Grid container className={classes.indGrid}>
-                <Grid item xs={6}>
-                  <Typography variant="h5" className={classes.subHeader}>
-                    How We Do It
-                  </Typography>
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body2" className={classes.description}>
-                    In Japan, heart surgeon. Number one. Steady hand. One day,
-                    yakuza boss need new heart. I do operation. But, mistake!
-                    Yakuza boss die. Yakuza very mad. I hide in fishing boat,
-                    come to America. No English, no food, no money. Darryl give
-                    me job. Now I have house, American car, and new woman.
-                    Darryl save life. My big secret: I kill yakuza boss on
-                    purpose. I good surgeon. The best!
-                  </Typography>
-                </Grid>
+              <Grid item xs={6}>
+                <Typography variant="body2" className={classes.description}>
+                  In Japan, heart surgeon. Number one. Steady hand. One day,
+                  yakuza boss need new heart. I do operation. But, mistake!
+                  Yakuza boss die. Yakuza very mad. I hide in fishing boat, come
+                  to America. No English, no food, no money. Darryl give me job.
+                  Now I have house, American car, and new woman. Darryl save
+                  life. My big secret: I kill yakuza boss on purpose. I good
+                  surgeon. The best!
+                </Typography>
               </Grid>
-            </Box>
-          </Grid>
+            </Grid>
+          </Box>
         </Grid>
-      </Container>
-    </>
+        <Grid item xs={6} className={classes.gridStyle}>
+          <Box className={classes.boxTwo}>
+            <Grid container className={classes.indGrid}>
+              <Grid item xs={6}>
+                <Typography variant="h5" className={classes.subHeader}>
+                  How We Do It
+                </Typography>
+              </Grid>
+              <Grid item xs={6}>
+                <Typography variant="body2" className={classes.description}>
+                  In Japan, heart surgeon. Number one. Steady hand. One day,
+                  yakuza boss need new heart. I do operation. But, mistake!
+                  Yakuza boss die. Yakuza very mad. I hide in fishing boat, come
+                  to America. No English, no food, no money. Darryl give me job.
+                  Now I have house, American car, and new woman. Darryl save
+                  life. My big secret: I kill yakuza boss on purpose. I good
+                  surgeon. The best!
+                </Typography>
+              </Grid>
+            </Grid>
+          </Box>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 

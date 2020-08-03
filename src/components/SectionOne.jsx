@@ -18,8 +18,11 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
   },
   section: {
-    height: "75vh",
-    marginTop: "128px",
+    height: "100vh",
+    backgroundImage: 'url(https://pictures.dealer.com/m/mercedesbenzofcoloradospringsmb/0537/c83c74d8334c80cbe2d3dd0fd1181efcx.jpg)',
+    backgroundSize: 'cover',
+    backgroundColor: "#0d0d0d",
+    opacity: "0.7"
   },
   textBox: {
     marginTop: "32px",
@@ -40,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
   itemTwo: {
     justify: "center",
   },
+  itemOne: {
+    marginTop: '136px'
+  }
 }));
 
 const SectionOne = () => {
@@ -60,10 +66,6 @@ const SectionOne = () => {
       </Grid>
       <Grid item xs={6} align="center">
         <Container className={classes.itemTwo}>
-          <img
-            className={classes.imgPic}
-            src="https://www.pngkit.com/png/full/681-6813019_mercedes-benz-clipart-convertible-black.png"
-          />
         </Container>
       </Grid>
 

@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { AddTestimonials } from "./components/AddTestimonials";
 import ContactPage from "./components/ContactPage";
 import AllTestimonials from "./components/AllTestimonials";
+import MyPDF from './components/test.pdf'
 
 function App() {
   return (
