@@ -42,12 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 const ArrowScroll = () => {
   const classes = useStyles();
-  return (
-
-        <Container align="center">
-          <ArrowDropDownIcon />
-        </Container>
-  );
+  return <ArrowDropDownIcon position="absolute" />;
 };
 
 export default ArrowScroll;

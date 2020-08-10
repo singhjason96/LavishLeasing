@@ -5,7 +5,8 @@ import NavBar from "./NavBar";
 import About from "./About";
 import TestimonialsSnippet from "./TestimonialsSnippet";
 import { Container, Tooltip } from "@material-ui/core";
-import ArrowScroll from "./ArrowScroll";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+
 import Plx from "react-plx";
 
 const parallaxData = [
@@ -27,9 +28,6 @@ const HomePage = () => {
     <GradientBackground>
       <NavBar />
       <SectionOne />
-      <Plx className="MyAwesomeParallax" parallaxData={parallaxData}>
-        <ArrowScroll />
-      </Plx>
       <About />
       <TestimonialsSnippet />
     </GradientBackground>

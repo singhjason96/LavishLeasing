@@ -17,6 +17,7 @@ import firebase from "./Firebase";
 import GradientBackground from "./GradientBackground";
 import { useForm } from "react-hook-form";
 import * as emailjs from "emailjs-com";
+import NavBar from './NavBar';
 
 const useStyles = makeStyles((theme) => ({
   formSize: {},
@@ -104,11 +105,12 @@ console.log(file)
 
   return (
     <GradientBackground>
+      <NavBar />
       <Grid container align="center" className={classes.containerStyle}>
         <Paper className={classes.boxStyle}>
           <form className={classes.formSize} id="former">
             <Typography variant="h5" className={classes.textStyle}>
-              Contact Us
+              Contact Us/Submit Application
             </Typography>
             <FormControl
               margin="normal"
