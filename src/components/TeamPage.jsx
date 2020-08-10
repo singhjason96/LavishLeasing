@@ -20,10 +20,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     width: "70%",
-    margin: theme.spacing(4)
+    margin: theme.spacing(8)
   },
   backStyle: {
-      height: '100vh'
+      paddingTop: '64px'
   },
   details: {
     display: "flex",
@@ -46,8 +46,9 @@ const useStyles = makeStyles((theme) => ({
     width: 38,
   },
   titleStyle: {
+    padding: '32px',
     textAlign: "center",
-    padding: "32px",
+    color: '#fff'
   },
 }));
 
@@ -56,6 +57,7 @@ const TeamPage = () => {
 
   return (
     <GradientBackground >
+        <NavBar />
       <Container align="center" className={classes.backStyle}>
         <Typography variant="h2" className={classes.titleStyle}>
           Meet The Team
