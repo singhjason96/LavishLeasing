@@ -19,13 +19,24 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   bigContainer: {
-    height: "75vh",
+    height: "100%",
     background:
       "url(https://pictures.topspeed.com/IMG/jpg/201707/2018-rolls-royce-phantom-20.jpg)",
     backgroundSize: "cover",
     maxWidth: "100% !important",
     backgroundColor: "#0d0d0d",
-    opacity: "0.7"
+    opacity: "0.7",
+    align: 'center',
+    justifyContent:'center',
+    ["@media (min-width:780px)"]: {
+      height: "75vh",
+      background:
+        "url(https://pictures.topspeed.com/IMG/jpg/201707/2018-rolls-royce-phantom-20.jpg)",
+      backgroundSize: "cover",
+      maxWidth: "100% !important",
+      backgroundColor: "#0d0d0d",
+      opacity: "0.7",
+    },
   },
   header: {
     fontFamily: "Roboto Slab, serif",
@@ -64,6 +75,15 @@ const useStyles = makeStyles((theme) => ({
     opacity: "0.7",
     justifyContent: "space-between",
     padding: "16px",
+    width: '200px',
+    ["@media (min-width:780px)"]: {
+      backgroundColor: "black",
+      padding: "16px",
+      opacity: "0.7",
+      justifyContent: "space-between",
+      padding: "16px",
+      width: '100%'
+    },
   },
   boxTwo: {
     backgroundColor: "#0066cc",
@@ -71,6 +91,15 @@ const useStyles = makeStyles((theme) => ({
     opacity: "0.7",
     justifyContent: "space-between",
     padding: "16px",
+    width: '200px',
+    ["@media (min-width:780px)"]: {
+      backgroundColor: "#0066cc",
+      padding: "16px",
+      opacity: "0.7",
+      justifyContent: "space-between",
+      padding: "16px",
+      width: '100%'
+    },
   },
   gridStyle: {
     margin: "auto",

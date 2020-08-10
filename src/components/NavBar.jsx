@@ -12,10 +12,21 @@ import MyPdf from './test.pdf'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    ["@media (min-width:780px)"]: {
+      flexGrow: 1,
+    },
   },
   menuButton: {
     display: 'flex',
-    justifyContent: 'space-between'
+    flexDirection: 'column',
+    textAlign: 'center',
+    ["@media (min-width:780px)"]: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      flexDirection: 'row',
+    },
   },
   title: {
     flexGrow: 1,

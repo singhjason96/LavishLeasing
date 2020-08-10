@@ -18,11 +18,19 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
   },
   section: {
-    height: "100vh",
+    ["@media (min-width:780px)"]: {
+      display: "flex",
+      flexDirection: "row",
+      height: "100vh",
+      opacity: "0.7",
+      backgroundColor: "#0d0d0d",
+    },
+    width: '100%',
     backgroundImage: 'url(https://pictures.dealer.com/m/mercedesbenzofcoloradospringsmb/0537/c83c74d8334c80cbe2d3dd0fd1181efcx.jpg)',
     backgroundSize: 'cover',
     backgroundColor: "#0d0d0d",
-    opacity: "0.7"
+    opacity: "0.7",
+    fontSize: '8px'
   },
   textBox: {
     marginTop: "32px",
