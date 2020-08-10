@@ -33,6 +33,16 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
 
+  containingStyle: {
+    flexDirection: 'column',
+    display: "flex",
+    justifyContent: 'space-between',
+    ["@media (min-width:780px)"]: {
+      display: "flex",
+      flexDirection: "row",
+    },
+  },
+
   item: {
     margin: theme.spacing(2),
     padding: "16px",
@@ -84,7 +94,7 @@ const About = () => {
       <Typography className={classes.header} variant="h3">
         Our Services
       </Typography>
-      <Grid container>
+      <Grid container className={classes.containingStyle}>
         <Grid item xs={6} className={classes.gridStyleOne}>
           <Box className={classes.boxOne}>
             <Grid container className={classes.indGrid}>

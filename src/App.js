@@ -4,7 +4,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { AddTestimonials } from "./components/AddTestimonials";
 import ContactPage from "./components/ContactPage";
 import AllTestimonials from "./components/AllTestimonials";
-import MyPDF from './components/test.pdf'
+import MyPDF from './components/test.pdf';
+import TeamPage from './components/TeamPage';
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
           </Route>
           <Route path="/alltestimonials">
             <AllTestimonials />
+          </Route>
+
+          <Route path='/team'>
+            <TeamPage />
           </Route>
         </div>
       </BrowserRouter>

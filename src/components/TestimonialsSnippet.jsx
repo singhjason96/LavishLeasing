@@ -16,9 +16,13 @@ import firebase from "./Firebase";
 
 const useStyles = makeStyles((theme) => ({
   cards: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     display: "flex",
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    ["@media (min-width:780px)"]: {
+      display: "flex",
+      flexDirection: "row",
+    },
   },
   indCard: {
     margin: theme.spacing(2),
@@ -28,8 +32,7 @@ const useStyles = makeStyles((theme) => ({
   contain: {
     marginTop: '32px',
     paddingBottom: '32px',
-    height: '55vh',
-    marginTop: '10%'
+    opacity: "0.7",
   },
   header: {
     fontFamily: "Roboto Slab, serif",

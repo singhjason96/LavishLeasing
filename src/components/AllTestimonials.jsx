@@ -33,11 +33,12 @@ const useStyles = makeStyles((theme) => ({
   titleStyle: {
       padding: '32px',
       fontFamily: "Roboto Slab, serif",
-      color: 'white'
+      color: 'white',
+      paddingTop: '72px'
   },
   textStyle: {
     fontFamily: "Roboto Slab, serif",
-  }
+  },
 }));
 
 const AllTestimonials = () => {
