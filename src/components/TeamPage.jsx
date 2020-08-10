@@ -19,7 +19,11 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    width: "50%",
+    width: "70%",
+    margin: theme.spacing(4)
+  },
+  backStyle: {
+      height: '100vh'
   },
   details: {
     display: "flex",
@@ -41,38 +45,72 @@ const useStyles = makeStyles((theme) => ({
     height: 38,
     width: 38,
   },
+  titleStyle: {
+    textAlign: "center",
+    padding: "32px",
+  },
 }));
 
 const TeamPage = () => {
   const classes = useStyles();
 
   return (
-    <GradientBackground>
-      <Card className={classes.root} align="center">
-        <div className={classes.details}>
-          <CardContent className={classes.content}>
-            <Typography component="h5" variant="h5">
-              Live From Space
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
-              I am actually great with old women. In fact, for the longest time
-              my best friend was my grandmother. And then she met Harriet. And
-              now she thinks she better than everybody. No, no, no. I don't
-              wanna hear moaning. This is a good day. You guys accomplished
-              something big. You lost a ton of weight, literally. A lot of
-              weight. And I don't care what any stupid scale says, you guys are
-              all gigantic losers. Business to business. The old fashion way. No
-              blackberries. No websites. I would like to see a website deliver
-              baskets of food to people.
-            </Typography>
-          </CardContent>
-        </div>
-        <img
-          className={classes.cover}
-          src="https://static.billboard.com/files/media/jatavia-johnson-city-girls-artist-visit-vibe-may-14-2018-billboard-1548-768x433.jpg"
-          title="Live from space album cover"
-        />
-      </Card>
+    <GradientBackground >
+      <Container align="center" className={classes.backStyle}>
+        <Typography variant="h2" className={classes.titleStyle}>
+          Meet The Team
+        </Typography>
+        <Card className={classes.root}>
+          <div className={classes.details}>
+            <CardContent className={classes.content}>
+              <Typography component="h5" variant="h5">
+                Live From Space
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary">
+                I am actually great with old women. In fact, for the longest
+                time my best friend was my grandmother. And then she met
+                Harriet. And now she thinks she better than everybody. No, no,
+                no. I don't wanna hear moaning. This is a good day. You guys
+                accomplished something big. You lost a ton of weight, literally.
+                A lot of weight. And I don't care what any stupid scale says,
+                you guys are all gigantic losers. Business to business. The old
+                fashion way. No blackberries. No websites. I would like to see a
+                website deliver baskets of food to people.
+              </Typography>
+            </CardContent>
+          </div>
+          <img
+            className={classes.cover}
+            src="https://static.billboard.com/files/media/jatavia-johnson-city-girls-artist-visit-vibe-may-14-2018-billboard-1548-768x433.jpg"
+            title="Live from space album cover"
+          />
+        </Card>
+        <Card className={classes.root}>
+          <img
+            className={classes.cover}
+            src="https://ssla.ulximg.com/image/amp_article_crop/cover/1552486109_7c3ed77f4d2b4894e1d577f9650805fd.jpg/f7d9d5635fa880e2cd98353f9899027b/1552486109_839da75978ea0b7fa2c7f82a58dd9607.jpg"
+            title="Live from space album cover"
+          />
+          <div className={classes.details}>
+            <CardContent className={classes.content}>
+              <Typography component="h5" variant="h5">
+                Live From Space
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary">
+                I am actually great with old women. In fact, for the longest
+                time my best friend was my grandmother. And then she met
+                Harriet. And now she thinks she better than everybody. No, no,
+                no. I don't wanna hear moaning. This is a good day. You guys
+                accomplished something big. You lost a ton of weight, literally.
+                A lot of weight. And I don't care what any stupid scale says,
+                you guys are all gigantic losers. Business to business. The old
+                fashion way. No blackberries. No websites. I would like to see a
+                website deliver baskets of food to people.
+              </Typography>
+            </CardContent>
+          </div>
+        </Card>
+      </Container>
     </GradientBackground>
   );
 };
