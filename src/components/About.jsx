@@ -119,13 +119,13 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
   const classes = useStyles();
   return (
-    <Container className={classes.bigContainer}>
+    <Container className={classes.bigContainer} justify="center" align="center">
       <Typography className={classes.header} variant="h3">
         Our Services
       </Typography>
-      <Grid container className={classes.containingStyle}>
-        <Grid item xs={6} className={classes.gridStyleOne}>
-          <Box className={classes.boxOne}>
+      <Grid container className={classes.containingStyle} justify="center" align="center">
+        <Grid item xs={6} className={classes.gridStyleOne} justify="center" align="center">
+          <Box className={classes.boxOne} justify="center" align="center">
             <Grid container className={classes.indGrid}>
               <Grid item xs={6}>
                 <Typography variant="h5" className={classes.subHeader}>
