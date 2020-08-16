@@ -73,9 +73,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "black",
     padding: "16px",
     opacity: "0.7",
-    justifyContent: "space-between",
     padding: "16px",
-    width: '300px',
+    width: '285px',
     ["@media (min-width:780px)"]: {
       backgroundColor: "black",
       padding: "16px",
@@ -89,9 +88,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#0066cc",
     padding: "16px",
     opacity: "0.7",
-    justifyContent: "space-between",
     padding: "16px",
-    width: '300px',
+    width: '285px',
     ["@media (min-width:780px)"]: {
       backgroundColor: "#0066cc",
       padding: "16px",
