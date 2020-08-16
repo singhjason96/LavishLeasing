@@ -18,12 +18,16 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
-    width: "70%",
-    margin: theme.spacing(8)
+    width: "100%",
+    ["@media (min-width:780px)"]: {
+      display: "flex",
+      width: "70%",
+      margin: theme.spacing(8),
+    },
   },
   backStyle: {
-      paddingTop: '64px'
+      paddingTop: '64px',
+      height: '125vh'
   },
   details: {
     display: "flex",
@@ -33,7 +37,11 @@ const useStyles = makeStyles((theme) => ({
     flex: "1 0 auto",
   },
   cover: {
-    width: "40%",
+    width: "70%",
+    backgroundSize: 'contain',
+    ["@media (min-width:780px)"]: {
+      width: "40%",
+    },
   },
   controls: {
     display: "flex",
@@ -88,11 +96,7 @@ const TeamPage = () => {
           />
         </Card>
         <Card className={classes.root}>
-          <img
-            className={classes.cover}
-            src="https://ssla.ulximg.com/image/amp_article_crop/cover/1552486109_7c3ed77f4d2b4894e1d577f9650805fd.jpg/f7d9d5635fa880e2cd98353f9899027b/1552486109_839da75978ea0b7fa2c7f82a58dd9607.jpg"
-            title="Live from space album cover"
-          />
+         
           <div className={classes.details}>
             <CardContent className={classes.content}>
               <Typography component="h5" variant="h5">
@@ -111,6 +115,11 @@ const TeamPage = () => {
               </Typography>
             </CardContent>
           </div>
+          <img
+            className={classes.cover}
+            src="https://ssla.ulximg.com/image/amp_article_crop/cover/1552486109_7c3ed77f4d2b4894e1d577f9650805fd.jpg/f7d9d5635fa880e2cd98353f9899027b/1552486109_839da75978ea0b7fa2c7f82a58dd9607.jpg"
+            title="Live from space album cover"
+          />
         </Card>
       </Container>
     </GradientBackground>
