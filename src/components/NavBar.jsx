@@ -8,6 +8,8 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import {Link} from 'react-router-dom';
 import MyPdf from './test.pdf'
+import AppBarCollapse from './AppBarCollapse';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -48,10 +50,7 @@ export default function NavBar() {
       <AppBar position="absolute" style={{ background: 'transparent', boxShadow: 'none', paddingRight: '32px'}}>
         <Toolbar className={classes.menuButton}>
         <Link to='/'><img src={require('./logo.png')} className={classes.itemOne} /></Link>
-        <Link to='/alltestimonials' className={classes.linkStyle}><Typography>Testimonials</Typography></Link>
-       <a href={MyPdf} className={classes.linkStyle}><Typography>Credit Application</Typography></a> 
-        <Link to='/contact' className={classes.linkStyle}><Typography>Contact/Submit</Typography></Link>
-        <Link to='/team' className={classes.linkStyle}><Typography>Team</Typography></Link>
+        <AppBarCollapse />
         </Toolbar>
       </AppBar>
     </div>
