@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Menu } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
-import HomeIcon from "@material-ui/icons/Home";
+import MenuIcon from '@material-ui/icons/Menu';
 
 const styles = theme => ({
   buttonCollapse: {
@@ -36,7 +36,7 @@ class ButtonAppBarCollapse extends React.Component {
     return (
       <div className={classes.buttonCollapse}>
         <IconButton onClick={this.handleMenu}>
-          <HomeIcon />
+          <MenuIcon color="white" />
         </IconButton>
         <Menu
           id="menu-appbar"

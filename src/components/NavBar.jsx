@@ -22,8 +22,6 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'center',
     ["@media (min-width:780px)"]: {
       display: 'flex',
       justifyContent: 'space-between',

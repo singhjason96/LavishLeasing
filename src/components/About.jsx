@@ -75,14 +75,14 @@ const useStyles = makeStyles((theme) => ({
     opacity: "0.7",
     justifyContent: "space-between",
     padding: "16px",
-    width: '200px',
+    width: '300px',
     ["@media (min-width:780px)"]: {
       backgroundColor: "black",
       padding: "16px",
       opacity: "0.7",
       justifyContent: "space-between",
       padding: "16px",
-      width: '100%'
+      width: '400px'
     },
   },
   boxTwo: {
@@ -91,25 +91,33 @@ const useStyles = makeStyles((theme) => ({
     opacity: "0.7",
     justifyContent: "space-between",
     padding: "16px",
-    width: '200px',
+    width: '300px',
     ["@media (min-width:780px)"]: {
       backgroundColor: "#0066cc",
       padding: "16px",
       opacity: "0.7",
       justifyContent: "space-between",
       padding: "16px",
-      width: '100%'
+      width: '400px'
     },
   },
   gridStyle: {
-    margin: "auto",
     justifyContent: "space-between",
-    padding: "128px",
+    padding: "0px !important",
+    ["@media (min-width:780px)"]: {
+      margin: "auto !important",
+      justifyContent: "space-between",
+      padding: "128px",
+    },
   },
   gridStyleOne: {
-    margin: "auto",
     justifyContent: "space-between",
-    padding: "128px",
+    padding: "0px !important",
+    ["@media (min-width:780px)"]: {
+      margin: "auto !important",
+      justifyContent: "space-between",
+      padding: "128px !important",
+    },
   },
   indGrid: {
     margin: theme.spacing(2),
