@@ -71,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
   },
   boxOne: {
     backgroundColor: "black",
-    padding: "16px",
     opacity: "0.7",
     width: '250px',
     ["@media (min-width:780px)"]: {
@@ -85,7 +84,6 @@ const useStyles = makeStyles((theme) => ({
   },
   boxTwo: {
     backgroundColor: "#0066cc",
-    padding: "16px",
     opacity: "0.7",
     width: '250px',
     ["@media (min-width:780px)"]: {
@@ -98,7 +96,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridStyle: {
-    justifyContent: "space-between",
     padding: "0px !important",
     ["@media (min-width:780px)"]: {
       margin: "auto !important",
@@ -107,7 +104,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   gridStyleOne: {
-    justifyContent: "space-between",
     padding: "0px !important",
     ["@media (min-width:780px)"]: {
       margin: "auto !important",
