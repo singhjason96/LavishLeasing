@@ -25,9 +25,17 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(2)
   },
   indCard:{
-      height: '400px',
+    display: 'flex',
+    flexDirection: 'column',
       opacity: '0.7',
-      padding: '24px'
+      padding: '24px',
+      ["@media (min-width:780px)"]: {
+        display: 'flex',
+        flexDirection: 'row',
+        opacity: '0.7',
+        padding: '24px',
+        width: '400px'
+      },
 
   },
   titleStyle: {
@@ -64,7 +72,7 @@ const AllTestimonials = () => {
         <Grid container alignItems="center" justify="center">
           {data.map((el) => {
             return (
-              <Grid item xs={3} className={classes.contain}>
+              <Grid item  className={classes.contain}>
                 <Card variant="outlined" className={classes.indCard}>
                   <CardContent>
                     <Typography variant="h5" className={classes.textStyle}>{el.personMessage}</Typography>
