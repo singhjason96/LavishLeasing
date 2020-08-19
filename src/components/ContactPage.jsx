@@ -17,15 +17,24 @@ import firebase from "./Firebase";
 import GradientBackground from "./GradientBackground";
 import { useForm } from "react-hook-form";
 import * as emailjs from "emailjs-com";
-import NavBar from './NavBar';
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+import EmailIcon from "@material-ui/icons/Email";
+import PhoneIcon from "@material-ui/icons/Phone";
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 const useStyles = makeStyles((theme) => ({
   formSize: {
-    margin: '32px',
+    margin: "32px",
+  },
+  footer: {
+    display: "flex",
+    margin: theme.spacing(2),
+    justifyContent: "space-evenly",
   },
   boxStyle: {
     width: "100%",
-    margin: '32px',
+    margin: "32px",
     ["@media (min-width:780px)"]: {
       width: "25%",
       textAlign: "center",
@@ -58,7 +67,7 @@ const ContactPage = () => {
   var [message, setMessage] = useState("");
   const classes = useStyles();
   var [email, setEmail] = useState("");
-  var [file, setFiles] = useState(null)
+  var [file, setFiles] = useState(null);
 
   const OnChangeName = (e) => {
     setName(e.target.value);
@@ -72,42 +81,39 @@ const ContactPage = () => {
   };
 
   const OnChangeFile = (e) => {
-    if(e.target.files[0]){
-      setFiles(e.target.files[0])
+    if (e.target.files[0]) {
+      setFiles(e.target.files[0]);
     }
-  }
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    console.log('this is clicked')
-    console.log('this was the file', file)
+    console.log("this is clicked");
+    console.log("this was the file", file);
     let templateParams = {
       from_name: email,
-      to_name: 'jason.singh@baruchmail.cuny.edu',
+      to_name: "jason.singh@baruchmail.cuny.edu",
       message_html: message,
-      file: file
-    }
+      file: file,
+    };
 
     emailjs.send(
-      'outlook',
-      'template_syJiFl0K',
+      "outlook",
+      "template_syJiFl0K",
       templateParams,
-      'user_4vHlLaKvbyuIPCxvoieQ5'
-    )
-    resetForm()
-  }
+      "user_4vHlLaKvbyuIPCxvoieQ5"
+    );
+    resetForm();
+  };
 
+  const resetForm = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
-const resetForm = () => {
-  setName('')
-  setEmail('')
-  setMessage('')
-}
-
-
-console.log(file)
-
+  console.log(file);
 
   return (
     <GradientBackground>
@@ -169,6 +175,20 @@ console.log(file)
             </Button>
           </form>
         </Paper>
+      </Grid>
+      <Grid container justify="center">
+        <Grid item xs={3} className={classes.footer}>
+          <EmailIcon />
+          <Typography>info@lavishleasingauto.com</Typography>
+        </Grid>
+        <Grid item xs={3} className={classes.footer}>
+          <PhoneIcon />
+          <Typography>800 555 5555</Typography>
+        </Grid>
+        <Grid item xs={3} className={classes.footer}>
+          <InstagramIcon /> 
+          <Typography>@lavishleaing</Typography>
+        </Grid>
       </Grid>
     </GradientBackground>
   );
