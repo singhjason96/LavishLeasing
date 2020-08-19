@@ -20,16 +20,22 @@ import * as emailjs from "emailjs-com";
 import NavBar from './NavBar';
 
 const useStyles = makeStyles((theme) => ({
-  formSize: {},
+  formSize: {
+    margin: '32px',
+  },
   boxStyle: {
-    width: "25%",
-    textAlign: "center",
-    marginLeft: "auto",
-    paddingTop: "16px",
-    marginRight: "auto",
-    paddingLeft: "32px",
-    paddingRight: "32px",
-    paddingBottom: "16px",
+    width: "100%",
+    margin: '32px',
+    ["@media (min-width:780px)"]: {
+      width: "25%",
+      textAlign: "center",
+      marginLeft: "auto",
+      paddingTop: "16px",
+      marginRight: "auto",
+      paddingLeft: "32px",
+      paddingRight: "32px",
+      paddingBottom: "16px",
+    },
   },
   containerStyle: {
     alignItems: "center",
@@ -110,7 +116,7 @@ console.log(file)
         <Paper className={classes.boxStyle}>
           <form className={classes.formSize} id="former">
             <Typography variant="h5" className={classes.textStyle}>
-              Contact Us/Submit Application
+              Contact Us
             </Typography>
             <FormControl
               margin="normal"
@@ -140,9 +146,9 @@ console.log(file)
                 onChange={OnChangeEmail}
               />
             </FormControl>
-            <FormControl>
+            {/*<FormControl>
               <input name="image" type="file" onChange={OnChangeFile} />
-            </FormControl>
+            </FormControl>*/}
             <FormControl margin="normal" required fullWidth>
               <TextField
                 id="full-width-text-field"
