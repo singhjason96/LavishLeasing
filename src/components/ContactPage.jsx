@@ -28,9 +28,30 @@ const useStyles = makeStyles((theme) => ({
     margin: "32px",
   },
   footer: {
-    display: "flex",
-    margin: theme.spacing(2),
-    justifyContent: "space-evenly",
+    display: 'flex',
+    flexDirection: "column",
+    alignItems: 'center',
+    textAlign: 'center',
+    ["@media (min-width:780px)"]: {
+      display: "flex",
+      margin: theme.spacing(2),
+      justifyContent: "space-evenly",
+      textAlign: 'center'
+    }
+  },
+  footerContainer: {
+    display: 'flex',
+    flexDirection: "column",
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    ["@media (min-width:780px)"]: {
+      display: "flex",
+      flexDirection:'row',
+      textAlign: 'center',
+
+    }
   },
   boxStyle: {
     width: "100%",
@@ -176,7 +197,7 @@ const ContactPage = () => {
           </form>
         </Paper>
       </Grid>
-      <Grid container justify="center">
+      <Grid container justify="center" className={classes.footerContainer}>
         <Grid item xs={3} className={classes.footer}>
           <EmailIcon />
           <Typography>info@lavishleasingauto.com</Typography>
