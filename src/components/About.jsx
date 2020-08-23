@@ -26,8 +26,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "100% !important",
     backgroundColor: "#0d0d0d",
     opacity: "0.7",
-    align: 'center',
-    justifyContent:'center',
+    align: "center",
+    justifyContent: "center",
     ["@media (min-width:780px)"]: {
       height: "75vh",
       background:
@@ -45,9 +45,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
   containingStyle: {
-    flexDirection: 'column',
+    flexDirection: "column",
     display: "flex",
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     ["@media (min-width:780px)"]: {
       display: "flex",
       flexDirection: "row",
@@ -72,27 +72,27 @@ const useStyles = makeStyles((theme) => ({
   boxOne: {
     backgroundColor: "black",
     opacity: "0.7",
-    width: '250px',
+    width: "250px",
     ["@media (min-width:780px)"]: {
       backgroundColor: "black",
       padding: "16px",
       opacity: "0.7",
       justifyContent: "space-between",
       padding: "16px",
-      width: '400px'
+      width: "400px",
     },
   },
   boxTwo: {
     backgroundColor: "#0066cc",
     opacity: "0.7",
-    width: '250px',
+    width: "250px",
     ["@media (min-width:780px)"]: {
       backgroundColor: "#0066cc",
       padding: "16px",
       opacity: "0.7",
       justifyContent: "space-between",
       padding: "16px",
-      width: '400px'
+      width: "400px",
     },
   },
   gridStyle: {
@@ -123,9 +123,14 @@ const About = () => {
       <Typography className={classes.header} variant="h3">
         Our Services
       </Typography>
-      <Grid container className={classes.containingStyle} justify="center" align="center">
-        <Grid item xs={6} className={classes.gridStyleOne} >
-          <Box className={classes.boxOne} >
+      <Grid
+        container
+        className={classes.containingStyle}
+        justify="center"
+        align="center"
+      >
+        <Grid item xs={6} className={classes.gridStyleOne}>
+          <Box className={classes.boxOne}>
             <Grid container className={classes.indGrid}>
               <Grid item xs={6}>
                 <Typography variant="h5" className={classes.subHeader}>
@@ -134,13 +139,13 @@ const About = () => {
               </Grid>
               <Grid item xs={6}>
                 <Typography variant="body2" className={classes.description}>
-                  In Japan, heart surgeon. Number one. Steady hand. One day,
-                  yakuza boss need new heart. I do operation. But, mistake!
-                  Yakuza boss die. Yakuza very mad. I hide in fishing boat, come
-                  to America. No English, no food, no money. Darryl give me job.
-                  Now I have house, American car, and new woman. Darryl save
-                  life. My big secret: I kill yakuza boss on purpose. I good
-                  surgeon. The best!
+                  Lavish Leasing is a family owned and operated auto leasing
+                  company with over 20 years of sales experience. It is Lavish
+                  Leasing’s mission to make your car shopping experience as
+                  swift, luxurious and inexpensive as possible. With our
+                  award-winning sales record and 5-star rated customer service,
+                  you are DESTINED to feel like family when you LEASE WITH
+                  LAVISH!
                 </Typography>
               </Grid>
             </Grid>
@@ -156,13 +161,12 @@ const About = () => {
               </Grid>
               <Grid item xs={6}>
                 <Typography variant="body2" className={classes.description}>
-                  In Japan, heart surgeon. Number one. Steady hand. One day,
-                  yakuza boss need new heart. I do operation. But, mistake!
-                  Yakuza boss die. Yakuza very mad. I hide in fishing boat, come
-                  to America. No English, no food, no money. Darryl give me job.
-                  Now I have house, American car, and new woman. Darryl save
-                  life. My big secret: I kill yakuza boss on purpose. I good
-                  surgeon. The best!
+                  With our White Glove service, you won’t ever have to step foot
+                  in an overwhelming, aggressive car dealership again! Not only
+                  will we save you valuable time, we are also dedicated to
+                  saving you money by giving you the best deal in town. We are
+                  able to obtain any make and model, so your dream car is always
+                  within reach.
                 </Typography>
               </Grid>
             </Grid>

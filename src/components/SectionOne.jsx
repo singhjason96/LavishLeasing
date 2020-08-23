@@ -3,8 +3,7 @@ import { Grid, Typography, Container, Tooltip, Fab } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import { Parallax } from "react-scroll-parallax";
-import ArrowScroll from './ArrowScroll';
-
+import ArrowScroll from "./ArrowScroll";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -25,12 +24,13 @@ const useStyles = makeStyles((theme) => ({
       opacity: "0.7",
       backgroundColor: "#0d0d0d",
     },
-    width: '100%',
-    backgroundImage: 'url(https://pictures.dealer.com/m/mercedesbenzofcoloradospringsmb/0537/c83c74d8334c80cbe2d3dd0fd1181efcx.jpg)',
-    backgroundSize: 'cover',
+    width: "100%",
+    backgroundImage:
+      "url(https://pictures.dealer.com/m/mercedesbenzofcoloradospringsmb/0537/c83c74d8334c80cbe2d3dd0fd1181efcx.jpg)",
+    backgroundSize: "cover",
     backgroundColor: "#0d0d0d",
     opacity: "0.7",
-    fontSize: '8px'
+    fontSize: "8px",
   },
   textBox: {
     marginTop: "32px",
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     fontFamily: "Roboto Slab, serif",
-    opacity: "0.7",
+    color: 'white'
   },
   imgPic: {
     width: "400px",
@@ -52,8 +52,8 @@ const useStyles = makeStyles((theme) => ({
     justify: "center",
   },
   itemOne: {
-    marginTop: '136px'
-  }
+    marginTop: "136px",
+  },
 }));
 
 const SectionOne = () => {
@@ -62,21 +62,22 @@ const SectionOne = () => {
     <Grid container className={classes.section}>
       <Grid item xs={6} className={classes.itemOne} align="center">
         <Typography className={classes.header}>
-          Lease or finance your car today
+          Lease or finance your car today!
         </Typography>
         <Container className={classes.textBox}>
           <Typography className={classes.text}>
-            Toby is in HR, which technically means he works for corporate, so
-            he's really not a part of our family. Also, he's divorced, so he's
-            really not a part of his family.
+            Looking to get a new car? Ready to end your lease early? Let us help
+            you! Lease or finance with Lavish Leasing and save time and money!
+            No wasted time in dealerships, no bait and switch and no hidden
+            fees! We are trustworthy, reliable and here to give you the best car
+            buying experience! Ready to get started? Submit your credit
+            application and we’ll give you a call!I
           </Typography>
         </Container>
       </Grid>
       <Grid item xs={6} align="center">
-        <Container className={classes.itemTwo}>
-        </Container>
+        <Container className={classes.itemTwo}></Container>
       </Grid>
-
     </Grid>
   );
 };
