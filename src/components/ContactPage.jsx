@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     display: "flex",
     flexWrap: "wrap",
-    height: "100vh",
+    height: "95vh",
   },
   textStyle: {
     fontFamily: "Roboto Slab, serif",
