@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import About from "./About";
 import TestimonialsSnippet from "./TestimonialsSnippet";
 import { makeStyles } from "@material-ui/core/styles";
+
 import { useMediaQuery } from "react-responsive";
 
 const Desktop = ({ children }) => {
@@ -28,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
   backStyle: {
     overflowX: 'hidden'
   },
+
 }));
 
 const HomePage = () => {
