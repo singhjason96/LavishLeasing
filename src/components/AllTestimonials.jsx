@@ -19,7 +19,7 @@ import NavBar from './NavBar';
 
 const useStyles = makeStyles((theme) => ({
   backgroundStyle: {
-    height: "100vh",
+    height: '100vh !important'
   },
   contain: {
       margin: theme.spacing(2)
